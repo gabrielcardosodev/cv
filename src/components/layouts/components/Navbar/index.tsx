@@ -72,7 +72,7 @@ export default function Navbar({ path, ...props }: NavbarProps) {
           <ThemeToggleButton />
           <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
             <Menu>
-              <MenuButton as={IconButton} icon={<List weight='thin' />} aria-label="options" />
+              <MenuButton as={IconButton} variant="outline" icon={<List weight='thin' />} aria-label="options" />
 
               <MenuList>
                 <Link as={NextLink} href='/' passHref>
