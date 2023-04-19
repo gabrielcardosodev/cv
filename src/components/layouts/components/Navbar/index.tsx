@@ -69,9 +69,9 @@ export default function Navbar({ path, ...props }: NavbarProps) {
         </Stack>
 
         <Box flex={1} textAlign="right">
+          <ThemeToggleButton />
           <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
             <Menu>
-              <ThemeToggleButton />
               <MenuButton as={IconButton} icon={<List weight='thin' />} aria-label="options" />
 
               <MenuList>
