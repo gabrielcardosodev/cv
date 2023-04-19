@@ -17,12 +17,16 @@ const colors = {
   grassTeal: '#88ccca'
 }
 
+const fonts = {
+  heading: "'M Plus Rounded 1c'"
+}
+
 const config: ThemeConfig = {
   initialColorMode: 'dark',
   useSystemColorMode: true,
 }
 
 // 3. extend the theme
-const theme = extendTheme({ config, styles, colors })
+const theme = extendTheme({ config, styles, colors, fonts })
 
 export default theme
