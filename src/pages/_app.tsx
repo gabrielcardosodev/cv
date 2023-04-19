@@ -1,4 +1,4 @@
-import { Fonts } from '@/components/Fonts'
+import { Fonts } from '@/components/fonts'
 import Layout from '@/components/layouts'
 import theme from '@/lib/theme'
 import '@/styles/globals.css'
