@@ -1,79 +1,21 @@
-import { Inter } from 'next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
+import { Container, Box, Heading } from '@chakra-ui/react'
 
 export default function Home() {
   return (
-    <div className='flex flex-col'>
+    <Container>
+      <Box borderRadius='lg' bg="red" p={3} mb={6} textAlign="center">
+        Hello, I&apos;m a frontend developer based in Brazil!
+      </Box>
 
-      {/* content */}
-      <div className='px-4'>
-        <div className='bg-zinc-700 p-3 rounded-md text-center'>
-          <span>Hello, I&apos;m an frontend developer based in Brazil!</span>
-        </div><div className='bg-zinc-700 p-3 rounded-md text-center'>
-          <span>Hello, I&apos;m an frontend developer based in Brazil!</span>
-        </div><div className='bg-zinc-700 p-3 rounded-md text-center'>
-          <span>Hello, I&apos;m an frontend developer based in Brazil!</span>
-        </div><div className='bg-zinc-700 p-3 rounded-md text-center'>
-          <span>Hello, I&apos;m an frontend developer based in Brazil!</span>
-        </div><div className='bg-zinc-700 p-3 rounded-md text-center'>
-          <span>Hello, I&apos;m an frontend developer based in Brazil!</span>
-        </div><div className='bg-zinc-700 p-3 rounded-md text-center'>
-          <span>Hello, I&apos;m an frontend developer based in Brazil!</span>
-        </div><div className='bg-zinc-700 p-3 rounded-md text-center'>
-          <span>Hello, I&apos;m an frontend developer based in Brazil!</span>
-        </div><div className='bg-zinc-700 p-3 rounded-md text-center'>
-          <span>Hello, I&apos;m an frontend developer based in Brazil!</span>
-        </div><div className='bg-zinc-700 p-3 rounded-md text-center'>
-          <span>Hello, I&apos;m an frontend developer based in Brazil!</span>
-        </div><div className='bg-zinc-700 p-3 rounded-md text-center'>
-          <span>Hello, I&apos;m an frontend developer based in Brazil!</span>
-        </div><div className='bg-zinc-700 p-3 rounded-md text-center'>
-          <span>Hello, I&apos;m an frontend developer based in Brazil!</span>
-        </div><div className='bg-zinc-700 p-3 rounded-md text-center'>
-          <span>Hello, I&apos;m an frontend developer based in Brazil!</span>
-        </div><div className='bg-zinc-700 p-3 rounded-md text-center'>
-          <span>Hello, I&apos;m an frontend developer based in Brazil!</span>
-        </div><div className='bg-zinc-700 p-3 rounded-md text-center'>
-          <span>Hello, I&apos;m an frontend developer based in Brazil!</span>
-        </div><div className='bg-zinc-700 p-3 rounded-md text-center'>
-          <span>Hello, I&apos;m an frontend developer based in Brazil!</span>
-        </div><div className='bg-zinc-700 p-3 rounded-md text-center'>
-          <span>Hello, I&apos;m an frontend developer based in Brazil!</span>
-        </div><div className='bg-zinc-700 p-3 rounded-md text-center'>
-          <span>Hello, I&apos;m an frontend developer based in Brazil!</span>
-        </div><div className='bg-zinc-700 p-3 rounded-md text-center'>
-          <span>Hello, I&apos;m an frontend developer based in Brazil!</span>
-        </div><div className='bg-zinc-700 p-3 rounded-md text-center'>
-          <span>Hello, I&apos;m an frontend developer based in Brazil!</span>
-        </div><div className='bg-zinc-700 p-3 rounded-md text-center'>
-          <span>Hello, I&apos;m an frontend developer based in Brazil!</span>
-        </div><div className='bg-zinc-700 p-3 rounded-md text-center'>
-          <span>Hello, I&apos;m an frontend developer based in Brazil!</span>
-        </div><div className='bg-zinc-700 p-3 rounded-md text-center'>
-          <span>Hello, I&apos;m an frontend developer based in Brazil!</span>
-        </div><div className='bg-zinc-700 p-3 rounded-md text-center'>
-          <span>Hello, I&apos;m an frontend developer based in Brazil!</span>
-        </div><div className='bg-zinc-700 p-3 rounded-md text-center'>
-          <span>Hello, I&apos;m an frontend developer based in Brazil!</span>
-        </div><div className='bg-zinc-700 p-3 rounded-md text-center'>
-          <span>Hello, I&apos;m an frontend developer based in Brazil!</span>
-        </div><div className='bg-zinc-700 p-3 rounded-md text-center'>
-          <span>Hello, I&apos;m an frontend developer based in Brazil!</span>
-        </div><div className='bg-zinc-700 p-3 rounded-md text-center'>
-          <span>Hello, I&apos;m an frontend developer based in Brazil!</span>
-        </div><div className='bg-zinc-700 p-3 rounded-md text-center'>
-          <span>Hello, I&apos;m an frontend developer based in Brazil!</span>
-        </div><div className='bg-zinc-700 p-3 rounded-md text-center'>
-          <span>Hello, I&apos;m an frontend developer based in Brazil!</span>
-        </div><div className='bg-zinc-700 p-3 rounded-md text-center'>
-          <span>Hello, I&apos;m an frontend developer based in Brazil!</span>
-        </div><div className='bg-zinc-700 p-3 rounded-md text-center'>
-          <span>Hello, I&apos;m an frontend developer based in Brazil!</span>
-        </div><div className='bg-zinc-700 p-3 rounded-md text-center'>
-          <span>Hello, I&apos;m an frontend developer based in Brazil!</span>
-        </div>
-      </div>
-    </div>
+      <Box display={{ md: "flex" }}>
+        <Box flexGrow={1}>
+          <Heading variant="page-title">
+            Gabriel Cardoso
+          </Heading>
+
+          <p>Frontend Developer</p>
+        </Box>
+      </Box>
+    </Container >
   )
 }
