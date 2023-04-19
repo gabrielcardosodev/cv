@@ -1,29 +1,96 @@
-import { AppWindow } from "@phosphor-icons/react";
-import Link from "next/link";
+import {
+  Box,
+  useColorModeValue,
+  Container,
+  Flex,
+  Heading,
+  Stack,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  Link,
+  IconButton
+} from '@chakra-ui/react'
+import Logo from './components/Logo'
+import LinkItem from './components/LinkItem'
+import { List } from '@phosphor-icons/react'
+import NextLink from 'next/link'
+import ThemeToggleButton from './components/ThemeToggleButton'
 
-export default function Navbar() {
+interface NavbarProps {
+  path: string
+}
+
+export default function Navbar({ path, ...props }: NavbarProps) {
   return (
-    <nav className='backdrop-blur-md py-2 bg-zinc-800/70 fixed w-full z-10'>
-      <div className='flex justify-between p-2 mx-auto w-full max-w-3xl'>
-        <div className="flex gap-10">
-          <Link href={'/'} className="flex items-center gap-2 group">
-            <AppWindow className="transition-all group-hover:-translate-x-1" size={20} weight="fill" />
-            <p className="font-title">Gabriel Cardoso</p>
-          </Link>
+    <Box
+      as="nav"
+      position='fixed'
+      w="100%"
+      bg={useColorModeValue('#fffffff40', '#20202380')}
+      style={{ backdropFilter: 'blur(10px)' }}
+      zIndex={2}
+      {...props}
+    >
+      <Container
+        display='flex'
+        p={2}
+        maxW="container.md"
+        flexWrap="wrap"
+        alignItems='center'
+        justifyContent='space-between'
+      >
+        <Flex alignItems='center' mr={5}>
+          <Heading
+            as='h1'
+            size='lg'
+            letterSpacing='tighter'
+          >
+            <Logo />
+          </Heading>
+        </Flex>
 
-          <div className="flex gap-5">
-            <Link href={'/works'}>
-              <span className="underline-offset-4 hover:underline transition-all">Works</span>
-            </Link>
+        <Stack
+          direction={{ base: 'column', md: 'row' }}
+          display={{ base: 'none', md: 'flex' }}
+          width={{ base: 'full', md: 'auto' }}
+          mt={{ base: 4, md: 0 }}
+          alignItems='center'
+          flexGrow={1}
+        >
+          <LinkItem href='/works' path={path}>
+            Works
+          </LinkItem>
 
-            <Link href={'/contact'}>
-              <span className="underline-offset-4 hover:underline transition-all">Contact</span>
-            </Link>
-          </div>
-        </div>
+          <LinkItem href='/contact' path={path}>
+            Contact
+          </LinkItem>
+        </Stack>
 
-        <div>Menu</div>
-      </div>
-    </nav>
+        <Box flex={1} textAlign="right">
+          <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
+            <Menu>
+              <ThemeToggleButton />
+              <MenuButton as={IconButton} icon={<List weight='thin' />} aria-label="options" />
+
+              <MenuList>
+                <Link as={NextLink} href='/' passHref>
+                  <MenuItem>About</MenuItem>
+                </Link>
+
+                <Link as={NextLink} href='/works' passHref>
+                  <MenuItem>Works</MenuItem>
+                </Link>
+
+                <Link as={NextLink} href='/contact' passHref>
+                  <MenuItem>Contact</MenuItem>
+                </Link>
+              </MenuList>
+            </Menu>
+          </Box>
+        </Box>
+      </Container>
+    </Box>
   )
 }
