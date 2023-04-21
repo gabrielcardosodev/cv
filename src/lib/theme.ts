@@ -1,10 +1,6 @@
-// theme.ts
-
-// 1. import `extendTheme` function
 import { extendTheme, type ThemeConfig } from '@chakra-ui/react'
 import { mode } from '@chakra-ui/theme-tools'
 
-// 2. Add your color mode config
 const styles = {
   global: (props: any) => ({
     body: {
@@ -21,12 +17,28 @@ const fonts = {
   heading: "'M Plus Rounded 1c'"
 }
 
+const components = {
+  Heading: {
+    variants: {
+      'section-title': {
+        textDecoration: 'underline',
+        fontSize: 20,
+        textUnderlineOffset: 6,
+        textDecorationColor: '#525252',
+        textDecorationThickness: 4,
+        marginTop: 3,
+        marginBottom: 4
+      }
+    }
+  },
+}
+
 const config: ThemeConfig = {
   initialColorMode: 'dark',
   useSystemColorMode: true,
 }
 
 // 3. extend the theme
-const theme = extendTheme({ config, styles, colors, fonts })
+const theme = extendTheme({ config, styles, colors, fonts, components })
 
 export default theme
