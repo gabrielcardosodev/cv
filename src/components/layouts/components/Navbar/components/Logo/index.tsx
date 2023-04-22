@@ -13,7 +13,7 @@ line-height: 20px;
 padding: 10px;
 `
 
-export default function Logo() {
+export function Logo() {
   return (
     <Link href="/">
       <LogoBox>

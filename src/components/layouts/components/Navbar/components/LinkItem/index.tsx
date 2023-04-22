@@ -8,7 +8,7 @@ interface LinkItemProps {
   children: ReactNode
 }
 
-export default function LinkItem({ href, path, children }: LinkItemProps) {
+export function LinkItem({ href, path, children }: LinkItemProps) {
   const active = path === href
   const inactiveColor = useColorModeValue('gray200', 'whiteAlpha.900')
   const activeColor = useColorModeValue('purple.500', 'orange.200')

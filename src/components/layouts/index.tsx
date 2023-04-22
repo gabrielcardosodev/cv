@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { ReactNode } from "react";
-import Navbar from "./components/Navbar";
+import { Navbar } from "./components/Navbar";
 import { Box, Container } from '@chakra-ui/react'
 import { useRouter } from "next/router";
 
@@ -13,11 +13,6 @@ export default function Layout({ children }: LayoutProps) {
 
   return (
     <Box as="main" pb={8}>
-      <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Gabriel Cardoso - Homepage</title>
-      </Head>
-
       <Navbar path={asPath} />
 
       <Container maxW={"container.md"} pt={14}>

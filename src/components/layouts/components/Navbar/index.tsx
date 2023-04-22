@@ -12,17 +12,17 @@ import {
   Link,
   IconButton
 } from '@chakra-ui/react'
-import Logo from './components/Logo'
-import LinkItem from './components/LinkItem'
+import { Logo } from './components/Logo'
+import { LinkItem } from './components/LinkItem'
 import { List } from '@phosphor-icons/react'
 import NextLink from 'next/link'
-import ThemeToggleButton from './components/ThemeToggleButton'
+import { ThemeToggleButton } from './components/ThemeToggleButton'
 
 interface NavbarProps {
   path: string
 }
 
-export default function Navbar({ path, ...props }: NavbarProps) {
+export function Navbar({ path, ...props }: NavbarProps) {
   return (
     <Box
       as="nav"

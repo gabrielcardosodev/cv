@@ -2,7 +2,7 @@ import { IconButton, useColorMode, useColorModeValue } from '@chakra-ui/react'
 import { Moon, Sun } from '@phosphor-icons/react'
 import { AnimatePresence, motion } from 'framer-motion'
 
-export default function ThemeToggleButton() {
+export function ThemeToggleButton() {
   const { toggleColorMode } = useColorMode()
 
   return (

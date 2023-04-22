@@ -1,13 +1,19 @@
 import { Container, Box, Heading, Image, useColorModeValue, Link, Button } from '@chakra-ui/react'
 import NextLink from 'next/link'
-import Section from '@/components/section'
+import { Section } from '@/components/section'
 import { Paragraph } from '@/components/paragraph'
 import { CaretRight } from '@phosphor-icons/react'
 import { BioYear, SectionBio } from '@/components/bio'
+import Head from 'next/head'
 
 export default function Home() {
   return (
     <Container>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Gabriel Cardoso - Homepage</title>
+      </Head>
+
       <Box
         borderRadius='lg'
         bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
