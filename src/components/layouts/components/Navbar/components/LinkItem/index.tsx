@@ -13,13 +13,14 @@ export default function LinkItem({ href, path, children }: LinkItemProps) {
   const inactiveColor = useColorModeValue('gray200', 'whiteAlpha.900')
 
   return (
-    <Link
-      as={NextLink}
-      href={href}
-      p={2}
-      bg={active ? '#8257E5' : undefined}
-      color={active ? '#202023' : inactiveColor}>
-      {children}
-    </Link>
+    <NextLink href={href}>
+      <Link
+        as="div"
+        p={2}
+        bg={active ? 'purple.500' : undefined}
+        color={active ? '#202023' : inactiveColor}>
+        {children}
+      </Link>
+    </NextLink>
   )
 }
