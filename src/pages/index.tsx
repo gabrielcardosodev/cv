@@ -56,7 +56,7 @@ export default function Home() {
             </Heading>
 
             <Paragraph>Gabriel is a front-end developer based in Rio de Janeiro with a passion for building digital stuff he wants. He currently works as a front-end developer at {' '}
-              <Link fontWeight='bold' href='/works/lifevet' as={NextLink}>
+              <Link fontWeight='bold' target='_blank' href='https://www.cliente.life.vet.br/' as={NextLink}>
                 LifeVet
               </Link>
               .
