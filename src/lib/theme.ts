@@ -31,6 +31,12 @@ const components = {
       }
     }
   },
+  Link: {
+    baseStyle: (props: any) => ({
+      color: mode('#805AD5', '#F8D38D')(props),
+      textUnderlineOffset: 3
+    })
+  }
 }
 
 const config: ThemeConfig = {
@@ -38,7 +44,6 @@ const config: ThemeConfig = {
   useSystemColorMode: true,
 }
 
-// 3. extend the theme
 const theme = extendTheme({ config, styles, colors, fonts, components })
 
 export default theme
