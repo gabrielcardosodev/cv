@@ -4,7 +4,7 @@ import { ReactNode } from 'react'
 
 interface SectionProps {
   children: ReactNode
-  delay: string
+  delay?: string
 }
 
 const StyledDiv = chakra(motion.div, {
