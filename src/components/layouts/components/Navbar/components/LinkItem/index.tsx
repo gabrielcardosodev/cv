@@ -11,13 +11,14 @@ interface LinkItemProps {
 export default function LinkItem({ href, path, children }: LinkItemProps) {
   const active = path === href
   const inactiveColor = useColorModeValue('gray200', 'whiteAlpha.900')
+  const activeColor = useColorModeValue('purple.500', 'orange.200')
 
   return (
     <NextLink href={href}>
       <Link
         as="div"
         p={2}
-        bg={active ? 'purple.500' : undefined}
+        bg={active ? activeColor : undefined}
         color={active ? '#202023' : inactiveColor}>
         {children}
       </Link>
