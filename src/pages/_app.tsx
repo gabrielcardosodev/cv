@@ -3,6 +3,7 @@ import Layout from '@/components/layouts'
 import theme from '@/lib/theme'
 import '@/styles/globals.css'
 import { ChakraProvider } from '@chakra-ui/react'
+import { AnimatePresence } from 'framer-motion'
 import type { AppProps } from 'next/app'
 
 export default function App({ Component, pageProps }: AppProps) {
@@ -10,7 +11,9 @@ export default function App({ Component, pageProps }: AppProps) {
     <ChakraProvider theme={theme}>
       <Fonts />
       <Layout>
-        <Component {...pageProps} />
+        <AnimatePresence mode="wait" initial={true}>
+          <Component {...pageProps} />
+        </AnimatePresence>
       </Layout>
     </ChakraProvider>
   )
