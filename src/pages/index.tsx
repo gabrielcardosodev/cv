@@ -1,15 +1,27 @@
-import { Container, Box, Heading, Image, useColorModeValue } from '@chakra-ui/react'
+import { Container, Box, Heading, Image, useColorModeValue, Link, Button } from '@chakra-ui/react'
+import NextLink from 'next/link'
+import Section from '@/components/section'
+import { Paragraph } from '@/components/paragraph'
+import { CaretRight } from '@phosphor-icons/react'
+import { BioYear, SectionBio } from '@/components/bio'
 
 export default function Home() {
   return (
     <Container>
-      <Box borderRadius='lg' bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')} p={3} mt={2} mb={6} textAlign="center">
-        Hello, I&apos;m a frontend developer based in Brazil!
+      <Box
+        borderRadius='lg'
+        bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
+        p={3}
+        mt={2}
+        mb={6}
+        textAlign="center"
+      >
+        Hello, I&apos;m a frontend developer based in Rio de Janeiro!
       </Box>
 
       <Box display={{ md: "flex" }}>
         <Box flexGrow={1}>
-          <Heading variant="page-title">
+          <Heading>
             Gabriel Cardoso
           </Heading>
 
@@ -34,6 +46,56 @@ export default function Home() {
           />
         </Box>
       </Box>
+
+      <Section delay='0.1'>
+        <Box>
+          <Heading variant="section-title">
+            Work
+          </Heading>
+
+          <Paragraph>Gabriel is a front-end developer based in Rio de Janeiro with a passion for building digital stuff he wants. He currently works as a front-end developer at {' '}
+            <Link fontWeight='bold' href='/works/lifevet' as={NextLink}>
+              LifeVet
+            </Link>
+            .
+          </Paragraph>
+        </Box>
+
+        <Box textAlign="center" my={4}>
+          <NextLink href='/works'>
+            <Button rightIcon={<CaretRight />} colorScheme={useColorModeValue('purple', 'orange')}>
+              My portfolio
+            </Button>
+          </NextLink>
+        </Box>
+      </Section>
+
+      <Section delay='0.1'>
+        <Heading variant="section-title">Bio</Heading>
+
+        <SectionBio>
+          <BioYear>1999</BioYear>
+          Born in Rio de Janeiro, Brazil.
+        </SectionBio>
+
+        <SectionBio>
+          <BioYear>2021</BioYear>
+          Joined Rocketseat programming school to study ReactJS.
+        </SectionBio>
+
+        <SectionBio>
+          <BioYear>2022 to present</BioYear>
+          Works as front-end developer at LifeVet.
+        </SectionBio>
+      </Section>
+
+      <Section delay='0.1'>
+        <Heading variant="section-title">I love</Heading>
+
+        <Paragraph>
+          Music, Anime, Manga, Films, League Of Legends, My dog Apolo, Study
+        </Paragraph>
+      </Section>
     </Container >
   )
 }
