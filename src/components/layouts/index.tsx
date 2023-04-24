@@ -6,6 +6,7 @@ import { useRouter } from "next/router";
 
 import illustrationImg from '../../../public/images/technologies.svg'
 import Image from "next/image";
+import { Footer } from "../footer";
 
 interface LayoutProps {
   children: ReactNode
@@ -34,6 +35,8 @@ export default function Layout({ children }: LayoutProps) {
         </Box>
 
         {children}
+
+        <Footer />
       </Container>
     </Box>
   )
