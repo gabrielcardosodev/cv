@@ -1,7 +1,6 @@
 import { Fonts } from '@/components/fonts'
 import Layout from '@/components/layouts'
 import theme from '@/lib/theme'
-import '@/styles/globals.css'
 import { ChakraProvider } from '@chakra-ui/react'
 import { AnimatePresence } from 'framer-motion'
 import type { AppProps } from 'next/app'
