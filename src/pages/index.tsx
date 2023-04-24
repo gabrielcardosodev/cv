@@ -1,8 +1,8 @@
-import { Container, Box, Heading, Image, useColorModeValue, Link, Button } from '@chakra-ui/react'
+import { Container, Box, Heading, Image, useColorModeValue, Link, Button, List, ListItem, Icon } from '@chakra-ui/react'
 import NextLink from 'next/link'
 import { Section } from '@/components/section'
 import { Paragraph } from '@/components/paragraph'
-import { CaretRight } from '@phosphor-icons/react'
+import { CaretRight, GithubLogo, InstagramLogo, LinkedinLogo, TwitchLogo, TwitterLogo } from '@phosphor-icons/react'
 import { BioYear, SectionBio } from '@/components/bio'
 import { PageTransition } from '@/components/PageTransition'
 
@@ -97,6 +97,44 @@ export default function Home() {
           <Paragraph>
             Music, Anime, Manga, Films, League Of Legends, My dog Apolo, Study
           </Paragraph>
+        </Section>
+
+        <Section delay='0.3'>
+          <Heading variant="section-title">On the web</Heading>
+
+          <List>
+            <ListItem>
+              <Link as={NextLink} href='https://github.com/gabrielcardosodev'>
+                <Button colorScheme={useColorModeValue('purple', 'orange')} variant="ghost" leftIcon={<Icon as={GithubLogo} />}>
+                  @gabrielcardosodev
+                </Button>
+              </Link>
+            </ListItem>
+
+            <ListItem>
+              <Link as={NextLink} href='https://www.linkedin.com/in/gabrielcardosodev/'>
+                <Button colorScheme={useColorModeValue('purple', 'orange')} variant="ghost" leftIcon={<Icon as={LinkedinLogo} />}>
+                  @gabrielcardosodev
+                </Button>
+              </Link>
+            </ListItem>
+
+            <ListItem>
+              <Link as={NextLink} href='https://instagram/carjdoso'>
+                <Button colorScheme={useColorModeValue('purple', 'orange')} variant="ghost" leftIcon={<Icon as={InstagramLogo} />}>
+                  @cardjoso
+                </Button>
+              </Link>
+            </ListItem>
+
+            <ListItem>
+              <Link as={NextLink} href='https://twitter.com/cardjoso'>
+                <Button colorScheme={useColorModeValue('purple', 'orange')} variant="ghost" leftIcon={<Icon as={TwitterLogo} />}>
+                  @cardjoso
+                </Button>
+              </Link>
+            </ListItem>
+          </List>
         </Section>
       </Container>
     </PageTransition>
