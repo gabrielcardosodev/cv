@@ -20,6 +20,27 @@ export default function Works() {
         </Heading>
 
         <SimpleGrid columns={[1, 1, 2]} gap={6}>
+
+          <Section delay="0.3">
+            <WorkGridItem
+              id="letmeask"
+              title="Letmeask"
+              thumbnail={letMeAskThumbnail}
+            >
+              App developed for streamers to better organize their viewers&#39; questions.
+            </WorkGridItem>
+          </Section>
+
+          <Section delay="0.3">
+            <WorkGridItem
+              id="pomodoro"
+              title="Pomodoro"
+              thumbnail={pomodoroThumbnail}
+            >
+              A pomodoro timer.
+            </WorkGridItem>
+          </Section>
+
           <Section delay="0.3">
             <WorkGridItem
               id="todo"
@@ -32,31 +53,11 @@ export default function Works() {
 
           <Section delay="0.3">
             <WorkGridItem
-              id="letmeask"
-              title="Let me ask"
-              thumbnail={letMeAskThumbnail}
-            >
-              App developed for streamers to better organize their viewers&#39; questions.
-            </WorkGridItem>
-          </Section>
-
-          <Section delay="0.3">
-            <WorkGridItem
               id="grapesfinances"
               title="Grapes Finances"
               thumbnail={grapesFinancesThumbnail}
             >
               App created to organize and control your expenses.
-            </WorkGridItem>
-          </Section>
-
-          <Section delay="0.3">
-            <WorkGridItem
-              id="pomodoro"
-              title="Pomodoro"
-              thumbnail={pomodoroThumbnail}
-            >
-              A pomodoro timer.
             </WorkGridItem>
           </Section>
         </SimpleGrid>
