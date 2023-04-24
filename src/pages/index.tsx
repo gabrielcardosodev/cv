@@ -104,7 +104,7 @@ export default function Home() {
 
           <List>
             <ListItem>
-              <Link as={NextLink} href='https://github.com/gabrielcardosodev'>
+              <Link as={NextLink} href='https://github.com/gabrielcardosodev' target='_blank'>
                 <Button colorScheme={useColorModeValue('purple', 'orange')} variant="ghost" leftIcon={<Icon as={GithubLogo} />}>
                   @gabrielcardosodev
                 </Button>
@@ -112,7 +112,7 @@ export default function Home() {
             </ListItem>
 
             <ListItem>
-              <Link as={NextLink} href='https://www.linkedin.com/in/gabrielcardosodev/'>
+              <Link as={NextLink} href='https://www.linkedin.com/in/gabrielcardosodev/' target='_blank'>
                 <Button colorScheme={useColorModeValue('purple', 'orange')} variant="ghost" leftIcon={<Icon as={LinkedinLogo} />}>
                   @gabrielcardosodev
                 </Button>
@@ -120,7 +120,7 @@ export default function Home() {
             </ListItem>
 
             <ListItem>
-              <Link as={NextLink} href='https://instagram/carjdoso'>
+              <Link as={NextLink} href='https://instagram/carjdoso' target='_blank'>
                 <Button colorScheme={useColorModeValue('purple', 'orange')} variant="ghost" leftIcon={<Icon as={InstagramLogo} />}>
                   @cardjoso
                 </Button>
@@ -128,7 +128,7 @@ export default function Home() {
             </ListItem>
 
             <ListItem>
-              <Link as={NextLink} href='https://twitter.com/cardjoso'>
+              <Link as={NextLink} href='https://twitter.com/cardjoso' target='_blank'>
                 <Button colorScheme={useColorModeValue('purple', 'orange')} variant="ghost" leftIcon={<Icon as={TwitterLogo} />}>
                   @cardjoso
                 </Button>
