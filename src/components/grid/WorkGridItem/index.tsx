@@ -1,37 +1,39 @@
-import { Box, LinkBox, LinkOverlay, Text } from "@chakra-ui/react"
-import Image, { StaticImageData } from "next/image"
-import Link from "next/link"
+import { Box, LinkBox, LinkOverlay, Text, Image } from "@chakra-ui/react"
+import NextLink from "next/link"
 import { ReactNode } from "react"
 
 interface WorkGridItemProps {
   children: ReactNode
   id: string
   title: string
-  thumbnail: StaticImageData
+  thumbnail: string
 }
 
 export function WorkGridItem({ children, id, title, thumbnail }: WorkGridItemProps) {
   return (
     <Box w="100%" textAlign="center">
-      <Link href={`/works/${id}`}>
-        <LinkBox cursor="pointer">
-          <Image
-            src={thumbnail}
-            alt={title}
-            className="grid-item-thumbnail"
-          />
+      <LinkBox
+        as={NextLink}
+        href={`/works/${id}`}
+        cursor="pointer"
+        scroll={false}
+      >
+        <Image
+          alt={title}
+          src={thumbnail}
+          className="grid-item-thumbnail"
+        />
 
-          <LinkOverlay href={`/works/${id}`}>
-            <Text mt={2} fontSize={20}>
-              {title}
-            </Text>
-          </LinkOverlay>
-
-          <Text fontSize={14}>
-            {children}
+        <LinkOverlay as="div" href={`/works/${id}`}>
+          <Text mt={2} fontSize={20}>
+            {title}
           </Text>
-        </LinkBox>
-      </Link>
+        </LinkOverlay>
+
+        <Text fontSize={14}>
+          {children}
+        </Text>
+      </LinkBox>
     </Box>
   )
 }

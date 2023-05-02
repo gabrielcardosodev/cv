@@ -2,7 +2,7 @@ import { Container, Box, Heading, Image, useColorModeValue, Link, Button, List, 
 import NextLink from 'next/link'
 import { Section } from '@/components/section'
 import { Paragraph } from '@/components/paragraph'
-import { CaretRight, GithubLogo, InstagramLogo, LinkedinLogo, TwitchLogo, TwitterLogo } from '@phosphor-icons/react'
+import { CaretRight, GithubLogo, InstagramLogo, LinkedinLogo, TwitterLogo } from '@phosphor-icons/react'
 import { BioYear, SectionBio } from '@/components/bio'
 import { PageTransition } from '@/components/PageTransition'
 

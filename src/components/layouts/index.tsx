@@ -1,4 +1,3 @@
-import Head from "next/head";
 import { ReactNode } from "react";
 import { Navbar } from "./components/Navbar";
 import { Box, Container } from '@chakra-ui/react'
