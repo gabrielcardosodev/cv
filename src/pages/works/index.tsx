@@ -1,15 +1,16 @@
 import { WorkGridItem } from "@/components/grid/WorkGridItem";
-import NextLink from 'next/link'
 import { Section } from "@/components/section";
-import { Container, Divider, Heading, SimpleGrid, Link, Button, Text, useColorModeValue } from "@chakra-ui/react";
-import Head from "next/head";
+import { PageTransition } from "@/components/PageTransition";
 
+import { Container, Divider, Heading, SimpleGrid } from "@chakra-ui/react";
+
+import lifevetThumbnail from '../../../public/images/lifevetThumbnail.png'
+import rangelThumbnail from '../../../public/images/rangelThumbnail.png'
 import todoThumbnail from '../../../public/images/todoApp.png'
 import letMeAskThumbnail from '../../../public/images/letMeAskApp.png'
 import grapesFinancesThumbnail from '../../../public/images/grapesFinacesApp.png'
 import pomodoroThumbnail from '../../../public/images/pomodoroApp.png'
-import { GithubLogo } from "@phosphor-icons/react";
-import { PageTransition } from "@/components/PageTransition";
+
 
 export default function Works() {
   return (
@@ -20,12 +21,11 @@ export default function Works() {
         </Heading>
 
         <SimpleGrid columns={[1, 1, 2]} gap={6}>
-
           <Section delay="0.3">
             <WorkGridItem
               id="letmeask"
               title="letmeask"
-              thumbnail={letMeAskThumbnail}
+              thumbnail={letMeAskThumbnail.src}
             >
               App developed for streamers to better organize their viewers&#39; questions.
             </WorkGridItem>
@@ -35,7 +35,7 @@ export default function Works() {
             <WorkGridItem
               id="pomodoro"
               title="Pomodoro"
-              thumbnail={pomodoroThumbnail}
+              thumbnail={pomodoroThumbnail.src}
             >
               A pomodoro timer.
             </WorkGridItem>
@@ -45,7 +45,7 @@ export default function Works() {
             <WorkGridItem
               id="todo"
               title="Todo"
-              thumbnail={todoThumbnail}
+              thumbnail={todoThumbnail.src}
             >
               To do app to organizing your day more efficiently.
             </WorkGridItem>
@@ -55,31 +55,40 @@ export default function Works() {
             <WorkGridItem
               id="grapesfinances"
               title="Grapes Finances"
-              thumbnail={grapesFinancesThumbnail}
+              thumbnail={grapesFinancesThumbnail.src}
             >
               App created to organize and control your expenses.
             </WorkGridItem>
           </Section>
         </SimpleGrid>
 
-        <Divider borderColor="gray" mb={10} />
+        <Divider borderColor="gray" my={6} />
 
-        <Button
-          as={NextLink}
-          href="https://github.com/gabrielcardosodev"
-          target="_blank"
-          w="100%"
-          h={50}
-          colorScheme={useColorModeValue('purple', 'orange')}
-        >
-          <Text
-            display="flex"
-            alignItems="center"
-            gap={2}
-          >
-            View more in my github <GithubLogo weight="fill" />
-          </Text>
-        </Button>
+        <Heading as="h3" fontSize={20} mb={4}>
+          Collaborations
+        </Heading>
+
+        <SimpleGrid columns={[1, 1, 2]} gap={6}>
+          <Section>
+            <WorkGridItem
+              id="lifevet-client-app"
+              title="Lifevet"
+              thumbnail={lifevetThumbnail.src}
+            >
+              App created to client access.
+            </WorkGridItem>
+          </Section>
+
+          <Section>
+            <WorkGridItem
+              id="rangel-imoveis"
+              title="Rangel Imóveis"
+              thumbnail={rangelThumbnail.src}
+            >
+              A website for a real estate.
+            </WorkGridItem>
+          </Section>
+        </SimpleGrid>
       </Container>
     </PageTransition >
   )
