@@ -24,7 +24,7 @@ export default function Works() {
           <Section delay="0.3">
             <WorkGridItem
               id="letmeask"
-              title="Letmeask"
+              title="letmeask"
               thumbnail={letMeAskThumbnail}
             >
               App developed for streamers to better organize their viewers&#39; questions.
