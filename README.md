@@ -1,6 +1,6 @@
 ## My website
 
-[cv-beta-six.vercel.app][cv-beta-six.vercel.app]
+[cv-beta-six.vercel.app](cv-beta-six.vercel.app)
 
 ### Stack
 
