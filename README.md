@@ -2,7 +2,7 @@
 
 [cv-beta-six.vercel.app](cv-beta-six.vercel.app)
 
-### Stack
+## Stack
 
 - [Next.js](https://nextjs.org/)
 - [Chakra UI](https://chakra-ui.com/)
