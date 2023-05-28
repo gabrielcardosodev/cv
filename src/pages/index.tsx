@@ -120,7 +120,7 @@ export default function Home() {
             </ListItem>
 
             <ListItem>
-              <Link as={NextLink} href='https://instagram/carjdoso' target='_blank'>
+              <Link as={NextLink} href='https://www.instagram.com/cardjoso' target='_blank'>
                 <Button colorScheme={useColorModeValue('purple', 'orange')} variant="ghost" leftIcon={<Icon as={InstagramLogo} />}>
                   @cardjoso
                 </Button>
