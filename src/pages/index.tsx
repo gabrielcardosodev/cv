@@ -118,22 +118,6 @@ export default function Home() {
                 </Button>
               </Link>
             </ListItem>
-
-            <ListItem>
-              <Link as={NextLink} href='https://www.instagram.com/cardjoso' target='_blank'>
-                <Button colorScheme={useColorModeValue('purple', 'orange')} variant="ghost" leftIcon={<Icon as={InstagramLogo} />}>
-                  @cardjoso
-                </Button>
-              </Link>
-            </ListItem>
-
-            <ListItem>
-              <Link as={NextLink} href='https://twitter.com/cardjoso' target='_blank'>
-                <Button colorScheme={useColorModeValue('purple', 'orange')} variant="ghost" leftIcon={<Icon as={TwitterLogo} />}>
-                  @cardjoso
-                </Button>
-              </Link>
-            </ListItem>
           </List>
         </Section>
       </Container>
