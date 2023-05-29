@@ -2,7 +2,7 @@ import { PageTransition } from "@/components/PageTransition";
 import { Paragraph } from "@/components/paragraph";
 import { WorkBadge } from "@/components/work/WorkBadge";
 import { WorkTitle } from "@/components/work/WorkTitle";
-import { Container, Link, List, ListItem, Text } from "@chakra-ui/react";
+import { Container, Link, List, ListItem } from "@chakra-ui/react";
 import NextLink from 'next/link'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
 import { WorkImage } from "@/components/work/WorkImage";
