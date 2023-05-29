@@ -1,6 +1,6 @@
 import { PageTransition } from "@/components/PageTransition";
 import { sendContactForm } from "@/lib/api";
-import { Button, Container, FormControl, FormErrorMessage, FormLabel, Heading, Input, Text, Textarea, useColorModeValue } from "@chakra-ui/react";
+import { Button, Container, FormControl, FormErrorMessage, FormLabel, Heading, Input, Textarea, useColorModeValue } from "@chakra-ui/react";
 import { ChangeEvent, useState } from "react";
 
 const initialValue = {
