@@ -55,7 +55,7 @@ export default function Home() {
               Work
             </Heading>
 
-            <Paragraph>Gabriel is a front-end developer based in Rio de Janeiro with a passion for building digital stuff he wants. He currently works as a front-end developer at {' '}
+            <Paragraph>Hello! My name is Gabriel, i&apos;m 24 years old and i&apos;m a front-end developer based in Rio de Janeiro with a passion for building digital stuff. Currently work as a front-end developer at  {' '}
               <Link fontWeight='bold' target='_blank' href='https://www.cliente.life.vet.br/' as={NextLink}>
                 LifeVet
               </Link>
