@@ -52,7 +52,7 @@ export default function Home() {
         <Section delay='0.1'>
           <Box>
             <Heading variant="section-title">
-              Work
+              Intro
             </Heading>
 
             <Paragraph>Hello! My name is Gabriel, i&apos;m 24 years old and i&apos;m a front-end developer based in Rio de Janeiro with a passion for building digital stuff. Currently work as a front-end developer at  {' '}
