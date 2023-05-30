@@ -1,20 +1,30 @@
+import { NextApiRequest, NextApiResponse } from 'next'
 import { transporter } from '@/lib/nodemailer'
 
-const email = process.env.EMAIL;
+const email = process.env.EMAIL
 
-const CONTACT_MESSAGE_FIELDS = {
+type CONTACT_MESSAGE_FIELD_TYPE = {
+  name: string
+  email: string
+  subject: string
+  message: string
+  [key: string]: string
+}
+
+const CONTACT_MESSAGE_FIELDS: CONTACT_MESSAGE_FIELD_TYPE = {
   name: 'Name',
   email: 'Email',
   subject: 'Subject',
   message: 'Message'
 }
 
-function generateEmailContent(data) {
+function generateEmailContent(data: any) {
   const stringData = Object.entries(data).reduce(
     (str, [key, val]) =>
       (str += `${CONTACT_MESSAGE_FIELDS[key]}: \n${val} \n \n`),
     ''
   )
+
   const htmlData = Object.entries(data).reduce((str, [key, val]) => {
     return (str += `<h3 class="form-heading" align="left">${CONTACT_MESSAGE_FIELDS[key]}</h3><p class="form-answer" align="left">${val}</p>`)
   }, '')
@@ -25,15 +35,18 @@ function generateEmailContent(data) {
   }
 }
 
-export default async function handler(req, res) {
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
   if (req.method === 'POST') {
     const data = req.body
 
-   const mailOptions = {
-    from: data.name + '&lt;' + data.email + '&gt;',
-    to: email,
-    subject: data.subject
-  }
+    const mailOptions = {
+      from: data.name + '&lt;' + data.email + '&gt;',
+      to: email,
+      subject: data.subject
+    }
 
     if (!data.name || !data.email || !data.subject || !data.message) {
       return res.status(400).json({ message: 'Bad request' })
@@ -42,11 +55,11 @@ export default async function handler(req, res) {
     try {
       await transporter.sendMail({
         ...mailOptions,
-        ...generateEmailContent(data),
+        ...generateEmailContent(data)
       })
 
       return res.status(200).json({ success: true })
-    } catch (error) {
+    } catch (error: any) {
       console.log(error)
       return res.status(400).json({ message: error.message })
     }
