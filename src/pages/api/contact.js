@@ -1,4 +1,6 @@
-import { mailOptions, transporter } from '@/lib/nodemailer'
+import { transporter } from '@/lib/nodemailer'
+
+const email = process.env.EMAIL;
 
 const CONTACT_MESSAGE_FIELDS = {
   name: 'Name',
@@ -27,6 +29,12 @@ export default async function handler(req, res) {
   if (req.method === 'POST') {
     const data = req.body
 
+   const mailOptions = {
+    from: data.name + '&lt;' + data.email + '&gt;',
+    to: email,
+    subject: data.subject
+  }
+
     if (!data.name || !data.email || !data.subject || !data.message) {
       return res.status(400).json({ message: 'Bad request' })
     }
@@ -35,7 +43,6 @@ export default async function handler(req, res) {
       await transporter.sendMail({
         ...mailOptions,
         ...generateEmailContent(data),
-        subject: data.subject
       })
 
       return res.status(200).json({ success: true })
