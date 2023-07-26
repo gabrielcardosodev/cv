@@ -1,4 +1,15 @@
-import { Container, Box, Heading, Image, useColorModeValue, Link, Button, List, ListItem, Icon } from '@chakra-ui/react'
+import {
+  Container,
+  Box,
+  Heading,
+  Image,
+  useColorModeValue,
+  Link,
+  Button,
+  List,
+  ListItem,
+  Icon
+} from '@chakra-ui/react'
 import NextLink from 'next/link'
 import { Section } from '@/components/section'
 import { Paragraph } from '@/components/paragraph'
@@ -8,10 +19,10 @@ import { PageTransition } from '@/components/PageTransition'
 
 export default function Home() {
   return (
-    <PageTransition title='Home'>
+    <PageTransition title="Home">
       <Container>
         <Box
-          borderRadius='lg'
+          borderRadius="lg"
           bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
           p={3}
           mt={2}
@@ -21,11 +32,9 @@ export default function Home() {
           Hello, I&apos;m a frontend developer based in Rio de Janeiro!
         </Box>
 
-        <Box display={{ md: "flex" }}>
+        <Box display={{ md: 'flex' }}>
           <Box flexGrow={1}>
-            <Heading>
-              Gabriel Cardoso
-            </Heading>
+            <Heading>Gabriel Cardoso</Heading>
 
             <p>Frontend Developer</p>
           </Box>
@@ -41,38 +50,38 @@ export default function Home() {
               borderWidth={2}
               borderStyle="solid"
               maxW="100px"
-              display='inline-block'
+              display="inline-block"
               borderRadius="full"
-              src='/images/gabriel.jpg'
-              alt='my profile image'
+              src="/images/gabriel.jpg"
+              alt="my profile image"
             />
           </Box>
         </Box>
 
-        <Section delay='0.1'>
+        <Section delay="0.1">
           <Box>
-            <Heading variant="section-title">
-              Intro
-            </Heading>
+            <Heading variant="section-title">Intro</Heading>
 
-            <Paragraph>Hello! My name is Gabriel, i&apos;m 24 years old and i&apos;m a front-end developer based in Rio de Janeiro with a passion for building digital stuff. Currently work as a front-end developer at  {' '}
-              <Link fontWeight='bold' target='_blank' href='https://www.cliente.life.vet.br/' as={NextLink}>
-                LifeVet
-              </Link>
-              .
+            <Paragraph>
+              Hello! My name is Gabriel, i&apos;m 24 years old and i&apos;m a
+              front-end developer based in Rio de Janeiro with a passion for
+              building digital stuff.
             </Paragraph>
           </Box>
 
           <Box textAlign="center" my={4}>
-            <NextLink href='/works'>
-              <Button rightIcon={<CaretRight />} colorScheme={useColorModeValue('purple', 'orange')}>
+            <NextLink href="/works">
+              <Button
+                rightIcon={<CaretRight />}
+                colorScheme={useColorModeValue('purple', 'orange')}
+              >
                 My portfolio
               </Button>
             </NextLink>
           </Box>
         </Section>
 
-        <Section delay='0.1'>
+        <Section delay="0.1">
           <Heading variant="section-title">Bio</Heading>
 
           <SectionBio>
@@ -91,7 +100,7 @@ export default function Home() {
           </SectionBio>
         </Section>
 
-        <Section delay='0.1'>
+        <Section delay="0.1">
           <Heading variant="section-title">I love</Heading>
 
           <Paragraph>
@@ -99,21 +108,37 @@ export default function Home() {
           </Paragraph>
         </Section>
 
-        <Section delay='0.3'>
+        <Section delay="0.3">
           <Heading variant="section-title">On the web</Heading>
 
           <List>
             <ListItem>
-              <Link as={NextLink} href='https://github.com/gabrielcardosodev' target='_blank'>
-                <Button colorScheme={useColorModeValue('purple', 'orange')} variant="ghost" leftIcon={<Icon as={GithubLogo} />}>
+              <Link
+                as={NextLink}
+                href="https://github.com/gabrielcardosodev"
+                target="_blank"
+              >
+                <Button
+                  colorScheme={useColorModeValue('purple', 'orange')}
+                  variant="ghost"
+                  leftIcon={<Icon as={GithubLogo} />}
+                >
                   @gabrielcardosodev
                 </Button>
               </Link>
             </ListItem>
 
             <ListItem>
-              <Link as={NextLink} href='https://www.linkedin.com/in/gabrielcardosodev/' target='_blank'>
-                <Button colorScheme={useColorModeValue('purple', 'orange')} variant="ghost" leftIcon={<Icon as={LinkedinLogo} />}>
+              <Link
+                as={NextLink}
+                href="https://www.linkedin.com/in/gabrielcardosodev/"
+                target="_blank"
+              >
+                <Button
+                  colorScheme={useColorModeValue('purple', 'orange')}
+                  variant="ghost"
+                  leftIcon={<Icon as={LinkedinLogo} />}
+                >
                   @gabrielcardosodev
                 </Button>
               </Link>
